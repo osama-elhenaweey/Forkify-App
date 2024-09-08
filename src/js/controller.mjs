@@ -5,6 +5,7 @@ import searchView from "./views/searchView.mjs";
 import resultView from "./views/resultView.mjs";
 import paginationView from "./views/paginationView.mjs";
 import bookmarksView from "./views/bookmarksView.mjs";
+import addRecipeView from "./views/addRecipeView.mjs";
 
 const recipeContainer = document.querySelector(".recipe");
 
@@ -74,6 +75,10 @@ const controlAddBookmark = function () {
 const controlBookmarks = function () {
     bookmarksView.render(model.state.bookmarks);
 };
+const controlAddRecipe = function (newRecipe) {
+    console.log(newRecipe);
+};
+
 const init = function () {
     bookmarksView.addHandlerRender(controlBookmarks);
     recipeView.addHandlerRender(controlRecipes);
@@ -81,5 +86,6 @@ const init = function () {
     recipeView.addHandlerUpdateBookmark(controlAddBookmark);
     searchView.addHandlerSearch(controlSearchResults);
     paginationView.addHandlerClick(controlPagination);
+    addRecipeView._addHandlerUpload(controlAddRecipe);
 };
 init();
