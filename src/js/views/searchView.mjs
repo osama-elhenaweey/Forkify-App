@@ -13,19 +13,19 @@ class SearchView extends View {
         this._parentElement.addEventListener("submit", function (e) {
             e.preventDefault();
             // document.querySelector(".recipe").innerHTML = " ";
-            document.querySelector(".recipe").innerHTML = `
-            <div class="message">
-                    <div>
-                        <svg>
-                            <use href="src/img/icons.svg#icon-smile"></use>
-                        </svg>
-                    </div>
-                    <p>
-                        Select a recipe or an ingredient. Have
-                        fun!
-                    </p>
-                </div>
-            `;
+            // document.querySelector(".recipe").innerHTML = `
+            // <div class="message">
+            //         <div>
+            //             <svg>
+            //                 <use href="src/img/icons.svg#icon-smile"></use>
+            //             </svg>
+            //         </div>
+            //         <p>
+            //             Select a recipe or an ingredient. Have
+            //             fun!
+            //         </p>
+            //     </div>
+            // `;
             handler();
         });
     }
